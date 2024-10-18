@@ -1,0 +1,31 @@
+server:
+  port: 8080
+token:
+  header: "Authorization"
+  #val key = Keys.secretKeyFor(SignatureAlgorithm.HS512)
+  #val encodedKey = key.encoded
+  #val base64Key = Base64.getEncoder().encodeToString(encodedKey)
+  #println("HS512密钥：$base64Key")
+  secret: "这里其实得是一个由生成密钥生成的密钥"
+database:
+  mysql:
+    host: 103.219.30.6
+    port: 37153
+    user: root
+    password: sbyunzi666
+    database: fuxi
+    table: manager
+redis:
+  # 是否启用redis 不启用则使用内部缓存
+  enable: false
+  host: localhost
+  port: 6379
+  #使用账号密码模式时取消注释
+  #user: user
+  #password: password
+  connect: 32
+  timeout: 1000
+feishu:
+  app_id: cli_**************c
+  app_secret: 6**************I
+  encrypt_key: "V**************8"
